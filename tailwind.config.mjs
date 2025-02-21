@@ -11,6 +11,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily:{
+        rethink: ["Rethink Sans","sans-serif"]
+      }
     },
   },
   plugins: [],
