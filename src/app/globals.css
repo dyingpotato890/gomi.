@@ -19,3 +19,15 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes textAnimation {
+  0%{
+    stroke-dashoffset: 180;
+  }
+  80%{
+    fill: transparent;
+  }
+  100%{
+    fill: white;
+    stroke-dashoffset:0;
+  }
+}
