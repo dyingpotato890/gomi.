@@ -13,18 +13,14 @@
     "framer-motion": "^12.4.7",
     "gsap": "^3.12.7",
     "leaflet": "^1.9.4",
-    "leaflet-defaulticon-compatibility": "^0.1.2",
     "next": "15.1.7",
     "next-auth": "^4.24.11",
-    "prisma": "^6.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/node": "22.13.4",
-    "@types/react": "19.0.10",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "postcss": "^8",
