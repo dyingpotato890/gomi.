@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Button from './Button';
 import { useRouter } from "next/navigation";
-
+import SignupFormDemo from './signup-form-demo';
 const Drawer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
@@ -13,9 +13,9 @@ const Drawer = () => {
     <div className="relative w-full flex justify-center items-center pt-14">
       {/* Button to toggle drawer */}
     <div className="flex justify-around w-[50vw]">
-    <Button label="Sign Up" func={router.push} parameter="/signup"/>
+   
  <Button label="Join Gomi" func={setIsOpen} parameter="true"/>
-    <Button label="Login" func={router.push} parameter="/login"/>
+  
     </div>
          {/* Animated Drawer */}
       <motion.div
@@ -23,7 +23,7 @@ const Drawer = () => {
         animate={{ y: isOpen ? '0%' : '100%' }}
         transition={{ type: 'spring', stiffness: 60, damping: 15 }}
         className="fixed bottom-0 left-0 w-full bg-white rounded-t-3xl shadow-lg p-6"
-        style={{ height: '50vh' }}
+        style={{ height: '70vh' }}
       >
         <div className="relative">
           <button
@@ -32,6 +32,7 @@ const Drawer = () => {
           >
             ✕
           </button>
+            <SignupFormDemo/>
           <div className="w-full h-16 rounded-b-full absolute -top-8"></div>
           <p className="text-center text-black text-lg mt-8">Welcome to the Drawer!</p>
         </div>
