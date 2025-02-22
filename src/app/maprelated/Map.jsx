@@ -4,20 +4,39 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
 const customIcon = new L.Icon({
-  iconUrl: "trash.png", // Path to the custom marker image
+  iconUrl: "/trash.png", // Path to the custom marker image
   iconSize: [54, 40], // Size of the icon [width, height]
   iconAnchor: [20, 40], // Anchor point (center-bottom)
   popupAnchor: [0, -35], // Popup position relative to the icon
 });
 
 const locations = [
-  { position: [28.6139, 77.209], name: "Delhi, India" },
-  { position: [12.9716, 77.5946], name: "Bangalore, India" },
-  { position: [19.076, 72.8777], name: "Mumbai, India" },
-  { position: [13.0827, 80.2707], name: "Chennai, India" },
-  { position: [10.8505, 76.2711], name: "Kerala, India" },
+  {
+    position: [28.6139, 77.209],
+    name: "Delhi, India",
+    image: "/sample.jpg",
+  },
+  {
+    position: [12.9716, 77.5946],
+    name: "Bangalore, India",
+    image: "/sample.jpg",
+  },
+  {
+    position: [19.076, 72.8777],
+    name: "Mumbai, India",
+    image: "/sample.jpg",
+  },
+  {
+    position: [13.0827, 80.2707],
+    name: "Chennai, India",
+    image: "/sample.jpg",
+  },
+  {
+    position: [10.8505, 76.2711],
+    name: "Kerala, India",
+    image: "/sample.jpg",
+  },
 ];
-
 export default function MapComponent() {
   return (
     <div className="flex justify-center items-center p-4">
@@ -36,7 +55,16 @@ export default function MapComponent() {
           />
           {locations.map((location, index) => (
             <Marker key={index} position={location.position} icon={customIcon}>
-              <Popup>{location.name}</Popup>
+              <Popup>
+                <div className="text-center">
+                  <h3 className="font-semibold">{location.name}</h3>
+                  <img
+                    src={location.image}
+                    alt={location.name}
+                    className="w-40 h-24 rounded-md mt-2"
+                  />
+                </div>
+              </Popup>
             </Marker>
           ))}
         </MapContainer>
