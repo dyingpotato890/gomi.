@@ -1,7 +1,15 @@
 const Header = ()=>{
   return(
-  <div className="shadow-lg rounded-br-lg rounded-bl-lg shadow-[#5E7B51] h-[5rem] bg-[#86A677] w-[65rem] ">
-    </div>
+  <div className="h-[5rem] shadow-md w-full flex justify-center bg-[#214E34] ">
+    <div className="h-[5rem] w-[50rem]">
+      <ul className= "flex w-full h-full justify-around items-center">
+        <li>Home</li>
+        <li>Contact</li>
+        <li>Login</li>
+        <li>Sign Up</li>
+      </ul>
+    </div>    
+  </div>
   )
 }
 export default Header;
