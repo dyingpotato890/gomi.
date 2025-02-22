@@ -25,7 +25,7 @@ export default function ImageUploader() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("/api/extract-coordinates", {
+      const response = await fetch("/api/coordinates", {
         method: "POST",
         body: formData,
       });
