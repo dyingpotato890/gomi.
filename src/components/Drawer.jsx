@@ -13,7 +13,7 @@ const Drawer = () => {
     <div className="relative w-full flex justify-center items-center pt-14">
       {/* Button to toggle drawer */}
     <div className="flex justify-around w-[50vw]">
-    <Button label="Sign Up" func={router.push} parameter="/landingpage"/>
+    <Button label="Sign Up" func={router.push} parameter="/signup"/>
  <Button label="Join Gomi" func={setIsOpen} parameter="true"/>
     <Button label="Login" func={router.push} parameter="/login"/>
     </div>
