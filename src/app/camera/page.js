@@ -64,7 +64,7 @@ export default function CameraUpload() {
       }
     }
 
-    const response = await fetch("/api/ecoordinates", {
+    const response = await fetch("/api/coordinates", {
       method: "POST",
       body: formData,
     });
