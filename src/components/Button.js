@@ -1,6 +1,6 @@
-const Button = () => {
+const Button = (label,func,parameter) => {
     return (
-        <button>hello</button>
+        <button onClick={()=>func(parameter)}>{label}</button>
     )
 
 }
