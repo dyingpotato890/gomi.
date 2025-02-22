@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@prisma/client": "^6.3.1",
+    "formidable": "^3.5.2",
     "framer-motion": "^12.4.7",
     "gsap": "^3.12.7",
+    "jpeg-exif": "^1.1.4",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "next": "15.1.7",
