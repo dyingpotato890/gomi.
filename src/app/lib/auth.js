@@ -53,9 +53,7 @@ export const authOptions = {
             return session;
         }
     },
-    pages: {
-        signIn: "/auth/signin", // Custom sign-in page (optional)
-    },
+   
     session: {
         strategy: "jwt",
     },

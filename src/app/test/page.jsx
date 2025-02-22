@@ -8,7 +8,8 @@ const Appbar = () => {
 
     return (
         <div>
-            <button onClick={() => signIn()}>Signin</button>
+            <button onClick={() => signIn(undefined, { callbackUrl: "/test" })
+}>Signin</button>
             <button onClick={() => signOut()}>Sign out</button>
             <div>
                 <h1>Hello</h1>
