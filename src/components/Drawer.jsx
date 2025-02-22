@@ -2,22 +2,22 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import Button from './Button';
+import { useRouter } from "next/navigation";
 
 const Drawer = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <div className="relative w-full flex justify-center items-center pt-14">
       {/* Button to toggle drawer */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="bg-white text-green-500 px-6 py-3 rounded-full shadow-lg"
-      >
-        Join Gomi.
-      </button>
-
-      {/* Animated Drawer */}
+    <div className="flex justify-around w-[50vw]">
+    <Button label="Sign Up" func={router.push} parameter="/landingpage"/>
+ <Button label="Join Gomi" func={setIsOpen} parameter="true"/>
+    <Button label="Login" func={router.push} parameter="/login"/>
+    </div>
+         {/* Animated Drawer */}
       <motion.div
         initial={{ y: '100%' }}
         animate={{ y: isOpen ? '0%' : '100%' }}
@@ -33,7 +33,7 @@ const Drawer = () => {
             ✕
           </button>
           <div className="w-full h-16 rounded-b-full absolute -top-8"></div>
-          <p className="text-center text-lg mt-8">Welcome to the Drawer!</p>
+          <p className="text-center text-black text-lg mt-8">Welcome to the Drawer!</p>
         </div>
       </motion.div>
     </div>
