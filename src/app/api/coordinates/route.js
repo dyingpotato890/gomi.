@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 import ExifParser from "exif-parser";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export async function POST(req) {
     try {
@@ -27,6 +30,15 @@ export async function POST(req) {
 
         const formattedLatitude = (latRef === 'S' ? -1 : 1) * latitude;
         const formattedLongitude = (lonRef === 'W' ? -1 : 1) * longitude;
+
+        const wastepile = await prisma.wastepile.create({
+            data: {
+              lat: formattedLatitude,
+              long: formattedLongitude,
+              imageUrl: null,
+              status: "PENDING",
+            },
+          });
 
         return NextResponse.json({ location: { latitude: formattedLatitude, longitude: formattedLongitude } });
 
